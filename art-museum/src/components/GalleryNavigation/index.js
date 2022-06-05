@@ -10,7 +10,7 @@ const GalleryNavigation = ({ galleries }) => {
             <h1>Galleries</h1>
             <NavLink exact to="/">Home</NavLink>
             {galleries.map(gallery => {
-                return <NavLink to={`/galleries/${gallery.id}`}>{gallery.name}</NavLink>
+                return <NavLink to={`/galleries/${gallery.id}`} key={gallery.id}>{gallery.name}</NavLink>
             })}
         </nav>
     )
