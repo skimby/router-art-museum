@@ -1,4 +1,5 @@
 import { useParams, Route } from "react-router-dom";
+import ArtDescription from "../ArtDescription";
 import ArtImageTile from "../ArtImageTile";
 
 const GalleryView = ({ galleries }) => {
@@ -17,6 +18,9 @@ const GalleryView = ({ galleries }) => {
                         <ArtImageTile art={art} key={art.id} />
                     )
                 })}
+            </Route>
+            <Route path='/galleries/:galleryId/art/:artId'>
+                <ArtDescription gallery={galleryChoice} />
             </Route>
         </div>
     )
